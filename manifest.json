@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Quick Learn",
+    "version": "3.0",
+    "description": "It is a chrome extension to resolve any query or problem instantly.",
+    "permision": ["storage", "activeTab", "scripting"],
+    "host_permission": ["<all_urls>"],
+    "action" : {
+        "default_popup": "main.html"
+    },
+    "content_scripts": [
+        {
+        "matches" : ["<all_urls>"],
+        "js": ["script.js"]
+        }
+    ]
+}
