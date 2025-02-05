@@ -1,0 +1,36 @@
+body {
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:white;
+    margin: 0px;
+    width: 370px;
+}
+
+.search {
+    position: relative;
+    width: 250px;
+}
+
+.input {
+    font-size: 15px;
+    width: 100%;
+    padding: 10px 20px 10px 30px;
+    border: 2px solid #c0c0c0c8;
+    border-radius: 23px;
+    outline: none;
+}
+
+.btn {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 0px;
+    top: 85%;
+    cursor: pointer;
+    font-size: 20px;
+    color: #1f1d1d;
+    transform: translateY(-50%);
+}
