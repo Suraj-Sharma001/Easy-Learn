@@ -34,3 +34,12 @@ body {
     color: #1f1d1d;
     transform: translateY(-50%);
 }
+
+.btn:hover {
+    color: #1f1d1d;
+}
+
+.output {
+    text-align: left;
+    margin-top: 10px;
+}
