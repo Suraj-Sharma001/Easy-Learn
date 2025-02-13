@@ -1,45 +1,75 @@
 body {
-    background: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color:white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 400px;
+    height: 300px;
     margin: 0px;
-    width: 370px;
+    padding: 0px;
 }
 
-.search {
-    position: relative;
-    width: 250px;
+.main {
+    width: 340px;
+    bottom: 20px;
+    padding: 8px;
+    text-align: center;
+    position: fixed;
+    right: 20px;
+    background-color: #7b54ab;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 1000; /* to make it on top of everything */
+    color: white;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4);  /* to make it look like floating */
 }
 
-.input {
-    font-size: 15px;
-    width: 100%;
-    padding: 10px 20px 10px 30px;
-    border: 2px solid #c0c0c0c8;
-    border-radius: 23px;
-    outline: none;
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.btn {
-    background: none;
-    border: none;
-    position: absolute;
-    right: 0px;
-    top: 85%;
+#close {
     cursor: pointer;
-    font-size: 20px;
-    color: #1f1d1d;
-    transform: translateY(-50%);
+    font-size: 15px;
 }
 
-.btn:hover {
-    color: #1f1d1d;
+#search-input {
+    width: 80%;
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    outline: none; 
+    font-size: 15px;
+    background: white; 
+    border-radius: 6px;
+}
+
+#btn {
+    background: whitesmoke;
+    font-size: 1rem;
+    padding: 8px 12px;
+    width: 100%;
+    color: rgb(48, 82, 95);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-top: 8px;
+    transition: 0.3s; /* to make it smooth */
+}
+
+#btn:hover {
+    background: rgb(65, 58, 149);
+    color: white;
 }
 
 .output {
-    text-align: left;
     margin-top: 10px;
+    background: #f3efef33;
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 8px;
+    backdrop-filter: blur(6px); /* to make it look like glass */
+    border-radius: 5px;
 }
