@@ -8,21 +8,28 @@
 body {
     color: white;
     text-align: center;
-    width: 350px;
-    height: auto;
+    width: 400px;
+    height: 600px;
     padding: 15px;
     background: linear-gradient(135deg, #171726, #1c2b54);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .main {
     background: rgba(255, 255, 255, 0.12);
     border-radius: 11px;
     padding: 18px;
+    right: 20px; /* Distance from the right edge */
     border: 1px solid rgba(255, 255, 255, 0.25);
     transition: all 0.4s ease;
     box-shadow: 0 9px 15px rgba(0, 0, 0, 0.2),
                 inset 2px 2px 10px rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(10px)
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 h2 {
@@ -76,42 +83,23 @@ h2 {
 }
 
 #output {
-    margin-top: 15px;
+    flex-grow: 1;
+    /* margin-top: 15px; */ 
     padding: 10px;
     text-align: left;
     background: rgba(198, 196, 196, 0.2);
     border-radius: 6px;
-    font-size: 0.5; /* Make text readable on small screens */
-    min-height: 20px;
-    display: none;
-    color: white;
+    font-size: 14px ; /* Make text readable on small screens */
+    /* min-height: 20px; */
+    /* display: none; */
+    /* color: white; */
     max-height: 450px;
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow-y: auto;   
+    /* overflow-x: hidden; */
 }
-
-
-
 
 #btn:hover {
     background: rgb(65, 58, 149);
     color: white;
 }
-/*
-#output {
-    max-width: 100%;
-    max-height: 350px;
-    word-wrap: break-word;
-    overflow-y: auto;
-    overflow-x: hidden;
-    margin-top: 10px;
-    background: rgba(243, 239, 239, 0.3); /* Light transparent background */
-    /* font-size: 15px;
-    text-align: left;
-    padding: 9px;
-    backdrop-filter: blur(6px);
-    border-radius: 5px;
-    line-height: 1.5;  */
- /* }  */
-
 
