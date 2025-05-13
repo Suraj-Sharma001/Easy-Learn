@@ -7,12 +7,84 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="main" id="bot">
-            <h2>Quick Learn 🔍</h2>
-        <input type="text" id="search-input" placeholder="Search your quary...">
-        <button id="btn">Search</button>
-        <div id="output"></div>
+    <div class="container">
+        <div class="header">
+            <h2>QuickLearn <span class="emoji">🔍</span></h2>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="search">Search</button>
+                <button class="tab-btn" data-tab="history">History</button>
+                <button class="tab-btn" data-tab="settings">Settings</button>
+            </div>
+        </div>
+
+        <div class="tab-content active" id="search-tab">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Ask anything...">
+                <button id="search-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="output-container">
+                <div id="output"></div>
+            </div>
+            <div class="actions">
+                <button id="copy-btn" class="action-btn" title="Copy to clipboard">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                </button>
+                <button id="save-btn" class="action-btn" title="Save to history">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                        <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                        <polyline points="7 3 7 8 15 8"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="tab-content" id="history-tab">
+            <div class="history-list" id="history-list">
+                <!-- History items will be added here -->
+                <div class="empty-state">Your search history will appear here</div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="settings-tab">
+            <div class="settings-form">
+                <div class="setting-item">
+                    <label for="theme-select">Theme</label>
+                    <select id="theme-select">
+                        <option value="dark">Dark</option>
+                        <option value="light">Light</option>
+                    </select>
+                </div>
+                <div class="setting-item">
+                    <label for="api-key">API Key (Optional)</label>
+                    <input type="password" id="api-key" placeholder="Enter your own API key">
+                </div>
+                <div class="setting-item">
+                    <label for="model-select">AI Model</label>
+                    <select id="model-select">
+                        <option value="gemini-1.5-flash">Gemini 1.5 Flash (Default)</option>
+                        <option value="gemini-1.5-pro">Gemini 1.5 Pro</option>
+                    </select>
+                </div>
+                <div class="setting-item checkbox">
+                    <label for="save-history">
+                        <input type="checkbox" id="save-history" checked>
+                        Save search history
+                    </label>
+                </div>
+                <button id="save-settings" class="settings-btn">Save Settings</button>
+                <button id="clear-data" class="settings-btn danger">Clear All Data</button>
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
-</html>
+</html> 

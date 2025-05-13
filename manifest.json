@@ -1,18 +1,17 @@
 {
     "manifest_version": 3,
-    "name": "Quick Learn",
-    "version": "3.0",
-    "description": "It is a chrome extension to resolve any query or problem instantly.",
-    "permissions": ["storage", "activeTab", "scripting"],
-    "host_permissions": ["https://gemini-api-url.com/*"],
-    "content_scripts": [
-        {
-        "matches" : ["http://*/*", "https://*/*"],
-        "js": ["script.js"],
-        "css": ["style.css"]
-        }
+    "name": "QuickLearn AI Search",
+    "version": "1.0",
+    "description": "AI-powered search assistant for quick answers and summaries",
+    "permissions": [
+      "storage",
+      "activeTab",
+      "clipboardWrite"
     ],
-    "action":{
-        "default_popup": "index.html"
+    "action": {
+      "default_popup": "index.html"
+    },
+    "background": {
+      "service_worker": "background.js"
     }
-}
+  }

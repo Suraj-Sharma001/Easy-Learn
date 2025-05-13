@@ -1,9 +1,0 @@
-"permision": ["storage", "activeTab", "scripting"]
-in this
-storage : give the permission to take data from chrome storage
-activeTab: allow the extension the use current tab 
-scripting: give me permision to add data in web page 
-
-host_permission: ["<all_urls>"] -> all website can use we can explicetly mention website also
-
-----------------------------Script.js-----------------------------------------------
